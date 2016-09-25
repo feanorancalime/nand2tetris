@@ -1,6 +1,4 @@
-// This file is part of www.nand2tetris.org
-// and the book "The Elements of Computing Systems"
-// by Nisan and Schocken, MIT Press.
+// Implentation of AND gate using NAND
 // File name: projects/01/And.hdl
 
 /**
@@ -14,5 +12,7 @@ CHIP And {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    Nand(a=a, b=b, out=n1);
+    Nand(a=a, b=b, out=n2);
+    Nand(a=n1, b=n2, out=out);
 }
